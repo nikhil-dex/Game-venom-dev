@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: red;
+    overflow: hidden;
+}
+.gameContainer{
+    background: url("img/bg.jpg") no-repeat center;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+
+}
+.dino{
+    position: absolute;
+    background:  url("img/hero.png") no-repeat center;
+    background-size: cover;
+    height: 150px;
+    width: 150px;
+    bottom: 21vh;
+    left: 20%;
+    }
+    
+.JumpHero{
+        
+    bottom: 21vh;
+    left: 20%;
+    animation: JumpingHero 1s linear infinite;
+}
+@keyframes JumpingHero{
+    0%{
+        bottom: 21vh;
+        /* left: 20%; */
+    }
+
+    50%{
+        bottom: 50vh;
+        /* left: 30% */
+    }
+        
+    100%{
+        bottom: 21vh;
+        /* left: 20%; */
+
+    }
+}
+.gameOver{
+    width: 100%;
+    visibility: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+
+    }
+.gameOver p{
+    color: red;
+    display: inline block;
+    border: 5px solid black;
+    background: white;
+    font-size: 100px;
+    padding: 100px;
+
+
+}
+#scoreCont{
+    position: absolute;
+    top: 10px;
+    border: 5px solid black;
+    padding: 10px;
+    color: red;
+    background: white;
+}
+.obstacle{
+        position: absolute;
+        background:  url("img/villainA.gif") no-repeat center;
+        background-size: cover;
+        height: 300px;
+        width: 200px;
+        bottom: 11vh;
+        left: 70%;
+        
+        }
+.obstacleRun{
+    left: 70%;
+    animation: obstacleRun linear infinite;
+    animation-duration: 5s;
+
+}
+@keyframes obstacleRun {
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
